@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basoseries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="page">
+
+    <header class="navbar">
+      <a class="brand" href="#home" aria-label="Basoseries">
+        <img src="images/logo.png" alt="Basoseries Logo">
+      </a>
+
+      <nav id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Search" onclick="showToast('Search is ready')">⌕</button>
+        <button class="icon-btn" aria-label="Cart" onclick="showToast('Your cart is empty')">🛒</button>
+        <button class="icon-btn menu-btn" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+      </div>
+    </header>
+
+    <main id="home">
+
+      <section class="hero reveal">
+        <img src="images/shop.jpg" alt="Basoseries shop">
+        <div class="hero-overlay"></div>
+        <div class="hero-spotlight"></div>
+
+        <div class="hero-content">
+          <h1>Welcome to Basoseries</h1>
+          <p>Your one-stop shop for everything Apple.</p>
+          <button class="primary-btn" onclick="goToShop()">
+            Shop Now <span>→</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="categories" class="cards-section">
+
+        <article class="product-card accessories reveal">
+
+          <img
+            src="images/accessories.jpg"
+            alt="Accessories"
+          >
+
+          <div class="card-content">
+            <h2>Accessories</h2>
+
+            <p>
+              Essentials that<br>
+              perfect your devices.
+            </p>
+
+            <button onclick="openCategory('Accessories')">
+              Explore Accessories <span>→</span>
+            </button>
+          </div>
+
+        </article>
+
+      </section>
+
+      <section id="shop" class="shop-section reveal">
+        <h2>Shop Apple</h2>
+        <p>Choose a category to continue.</p>
+
+        <div class="shop-buttons">
+          <button onclick="openCategory('Accessories')">
+            Accessories
+          </button>
+        </div>
+      </section>
+
+      <section id="about" class="info-section reveal">
+        <h2>Basoseries</h2>
+
+        <p>
+          Simple shopping. Clean design.
+          Your favorite Apple products in one place.
+        </p>
+      </section>
+
+      <section id="contact" class="info-section reveal">
+        <h2>Contact</h2>
+
+        <p>Contact us on WhatsApp</p>
+
+        <a
+          class="whatsapp-btn"
+          href="https://wa.me/923392007278"
+          target="_blank"
+        >
+          WhatsApp
+        </a>
+      </section>
+
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+
+      <div class="modal-box">
+
+        <button class="close" onclick="closeModal()">×</button>
+
+        <h2 id="modal-title"></h2>
+
+        <p>Category selected successfully.</p>
+
+        <button class="primary-btn" onclick="closeModal()">
+          Continue Shopping
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
