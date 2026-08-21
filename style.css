@@ -609,3 +609,73 @@ button{cursor:pointer;border:0}
     top:28px
   }
 }
+
+/* Search icon */
+.search-btn{
+  color:#fff !important;
+  font-size:22px;
+  font-weight:700;
+}
+
+/* Search bar */
+.search-box{
+  background:#000;
+  border:1px solid #fff;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.search-box input{
+  background:#000;
+  color:#fff;
+  border:0;
+  outline:none;
+  padding:10px 14px;
+}
+
+.search-box input::placeholder{
+  color:#aaa;
+}
+
+.search-close{
+  background:#000;
+  color:#fff;
+  border:0;
+}
+/* ===== 3D MOVING LOGO ===== */
+.brand{display:flex;align-items:center;perspective:800px;transform-style:preserve-3d}
+.brand img{display:block;max-height:46px;width:auto;transform-style:preserve-3d;filter:drop-shadow(0 4px 8px rgba(0,0,0,.45));animation:logo3DMove 2.8s ease-in-out infinite;will-change:transform,filter}
+@keyframes logo3DMove{
+  0%,100%{transform:translateX(0) rotateY(0deg) rotateX(0deg) rotateZ(0deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.45))}
+  25%{transform:translateX(7px) rotateY(-16deg) rotateX(4deg) rotateZ(-1deg);filter:drop-shadow(5px 7px 10px rgba(0,0,0,.55))}
+  50%{transform:translateX(13px) rotateY(0deg) rotateX(-3deg) rotateZ(1deg);filter:drop-shadow(8px 8px 12px rgba(0,0,0,.6))}
+  75%{transform:translateX(7px) rotateY(16deg) rotateX(4deg) rotateZ(-1deg);filter:drop-shadow(5px 7px 10px rgba(0,0,0,.55))}
+}
+@media (prefers-reduced-motion: reduce){.brand img{animation:none}}
+
+
+/* ===== 3D ROUND LOGO ===== */
+.brand {
+  display:flex;
+  align-items:center;
+  perspective:900px;
+  transform-style:preserve-3d;
+}
+
+.brand img {
+  display:block;
+  width:auto;
+  max-height:46px;
+  transform-style:preserve-3d;
+  animation: logoRound3D 2.5s linear infinite;
+  will-change:transform;
+}
+
+@keyframes logoRound3D {
+  from {
+    transform:rotateY(0deg);
+  }
+  to {
+    transform:rotateY(360deg);
+  }
+}
